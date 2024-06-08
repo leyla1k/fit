@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundPurpleLightTheme">#8C3BF3</color>
+    <color name="primaryColorLightTheme">#4DE8E4E4</color>
+    <color name="hideColorLightTheme">#434343</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

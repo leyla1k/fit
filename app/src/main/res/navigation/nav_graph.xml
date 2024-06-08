@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.todolist.ui.fragments.ProjectsFragment"
+        android:label="fragment_projects"
+        app:defaultNavHost="true"
+        tools:layout="@layout/fragment_projects" >
+        <action
+            android:id="@+id/action_projectsFragment_to_taskListFragment"
+            app:destination="@id/navigation_task_list">
+        <argument
+            android:name="projectId"
+            app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_task_list"
+        android:name="com.example.todolist.ui.fragments.TaskListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.todolist.ui.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_cameraFragment"
+            app:destination="@id/cameraFragment" >
+
+    </action>
+        <action
+            android:id="@+id/action_navigation_profile_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/navigation_new"
+        android:name="com.example.todolist.ui.alertDialogs.NewProjectDialogFragment"
+        android:label="NewProjectDialogFragment" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.todolist.ui.fragments.LocationsFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_locations" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.todolist.ui.fragments.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+
+
+</navigation>
